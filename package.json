@@ -1,0 +1,21 @@
+{
+  "name": "o365-mail-exporter",
+  "version": "1.0.0",
+  "description": "Export your Office 365 mail and attachments to a local folder",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "tsc && node src/index.js",
+    "clean": "tsc --build --clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["o365", "office365", "mail", "export", "backup"],
+  "author": "alpiiine",
+  "repository": "https://github.com/Alpiiine/o365-mail-exporter",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^3.0.5",
+    "node-fetch": "^3.3.1",
+    "@types/node": "^18.15.10"
+  }
+}

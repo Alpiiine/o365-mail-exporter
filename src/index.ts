@@ -20,6 +20,8 @@ let clientOptions: ClientOptions = {
 const client = Client.initWithMiddleware(clientOptions);
 
 async function getMails() {
+    init();
+
     let mailList = [];
     let mails;
 
@@ -82,6 +84,13 @@ async function parseMails(mails) {
     }
 
     return mailList;
+}
+
+function init(){
+    // for now, this function is only used to create output folder
+    if (!fs.existsSync("output")) {
+        fs.mkdirSync("output");
+    }
 }
 
 getMails().then(r =>
